@@ -174,7 +174,52 @@
                 <div id="content" class="content">
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="io接口"><a class="header" href="#io接口">IO接口</a></h1>
+<h1 id="io-接口"><a class="header" href="#io-接口">I/O 接口</a></h1>
+<ul>
+<li><a href="#io-%E6%8E%A5%E5%8F%A3%E6%A6%82%E8%A7%88">I/O 接口概览</a></li>
+<li><a href="#io%E6%8E%A5%E5%8F%A3%E4%BD%9C%E7%94%A8">IO接口作用</a></li>
+<li><a href="#io%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86">IO接口的工作原理</a></li>
+<li><a href="#%E6%8E%A5%E5%8F%A3%E4%B8%8E%E7%AB%AF%E5%8F%A3">接口与端口</a></li>
+<li><a href="#io%E7%AB%AF%E5%8F%A3%E5%8F%8A%E5%85%B6%E7%BC%96%E5%9D%80">I/O端口及其编址</a></li>
+<li><a href="#io-%E6%8E%A5%E5%8F%A3%E7%9A%84%E7%B1%BB%E5%9E%8B">I/O 接口的类型</a></li>
+</ul>
+<h2 id="io-接口概览"><a class="header" href="#io-接口概览">I/O 接口概览</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604192311.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604192215.png" alt="" /></p>
+<h2 id="io接口作用"><a class="header" href="#io接口作用">IO接口作用</a></h2>
+<p>I/O 接口作用：</p>
+<ul>
+<li>数据缓冲：通过数据缓冲寄存器（DBR）达到主机和外设工作速度的匹配</li>
+<li>错误或状态监测：通过状态寄存器反馈设备的各种错误、状态信息，供CPU查用</li>
+<li>控制和定时：接收从控制总线发来的控制信号、时钟信号</li>
+<li>数据格式转换：串-并、并-串等格式转换</li>
+<li>与主机和设备通信：实现主机一I/O接口一I/O设备之间的通信</li>
+</ul>
+<h2 id="io接口的工作原理"><a class="header" href="#io接口的工作原理">IO接口的工作原理</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604191308.png" alt="" /></p>
+<h2 id="接口与端口"><a class="header" href="#接口与端口">接口与端口</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604191640.png" alt="" /></p>
+<h2 id="io端口及其编址"><a class="header" href="#io端口及其编址">I/O端口及其编址</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604191702.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604192137.png" alt="" /></p>
+<h2 id="io-接口的类型"><a class="header" href="#io-接口的类型">I/O 接口的类型</a></h2>
+<p>按数据传送方式可分为</p>
+<ul>
+<li>并行接口：一个字节或一个字所有位同时传送。</li>
+<li>串行接口：一位一位地传送。</li>
+</ul>
+<p>注：这里所说的数据传送方式指的是外设和接口一侧的传送方式。接口要完成数据格式转换。</p>
+<p>按主机访问I/O设备的控制方式可分为</p>
+<ul>
+<li>程序查询接口</li>
+<li>中断接口</li>
+<li>DMA接口</li>
+</ul>
+<p>按功能选择的灵活性可分为</p>
+<ul>
+<li>可编程接口</li>
+<li>不可编程接口</li>
+</ul>
 
                     </main>
 

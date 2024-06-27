@@ -176,52 +176,846 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="前言"><a class="header" href="#前言">前言</a></h1>
+<p>本仓库是对计算机组成原理学习过程的记录，内容主要来自王道计算机组成原理考研课程。课程链接如下：</p>
+<p><a href="https://www.bilibili.com/video/BV1ps4y1d73V">王道计算机考研 计算机组成原理</a></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="计算机系统概述"><a class="header" href="#计算机系统概述">计算机系统概述</a></h1>
+<ul>
+<li><a href="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0.html#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B">计算机发展历程</a></li>
+<li><a href="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0.html#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84">计算机系统层次结构</a></li>
+<li><a href="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0.html#%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87">计算机性能指标</a></li>
+</ul>
+<h2 id="计算机发展历程"><a class="header" href="#计算机发展历程">计算机发展历程</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627190559.png" alt="" /></p>
+<h2 id="计算机系统层次结构"><a class="header" href="#计算机系统层次结构">计算机系统层次结构</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627190640.png" alt="" /></p>
+<p>冯·诺依曼计算机的特点：</p>
+<ol>
+<li>计算机由五大部件组成</li>
+<li>指令和数据以同等地位存于存储器，可按地址寻访</li>
+<li>指令和数据用二进制表示</li>
+<li>指令由操作码和地址码组成</li>
+<li>存储程序</li>
+<li>以运算器为中心 (现在一般以存储器为中心)</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627190717.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627191028.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627191109.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627191147.png" alt="" /></p>
+<h2 id="计算机性能指标"><a class="header" href="#计算机性能指标">计算机性能指标</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627191337.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="数据的表示和运算"><a class="header" href="#数据的表示和运算">数据的表示和运算</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<!-- toc --><div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="数制和编码"><a class="header" href="#数制和编码">数制和编码</a></h1>
+<ul>
+<li><a href="%E6%95%B0%E5%88%B6%E5%92%8C%E7%BC%96%E7%A0%81.html#%E8%BF%9B%E4%BD%8D%E8%AE%A1%E6%95%B0%E5%88%B6">进位计数制</a></li>
+<li><a href="%E6%95%B0%E5%88%B6%E5%92%8C%E7%BC%96%E7%A0%81.html#bcd-%E7%A0%81">BCD 码</a></li>
+<li><a href="%E6%95%B0%E5%88%B6%E5%92%8C%E7%BC%96%E7%A0%81.html#%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B4%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97">无符号整数的表示与运算</a></li>
+<li><a href="%E6%95%B0%E5%88%B6%E5%92%8C%E7%BC%96%E7%A0%81.html#%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B4%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81">有符号整数的表示与运算——原码、反码、补码</a></li>
+<li><a href="%E6%95%B0%E5%88%B6%E5%92%8C%E7%BC%96%E7%A0%81.html#%E5%8E%9F%E5%8F%8D%E8%A1%A5%E7%A0%81%E7%9A%84%E7%89%B9%E6%80%A7%E5%AF%B9%E6%AF%94">原反补码的特性对比</a></li>
+<li><a href="%E6%95%B0%E5%88%B6%E5%92%8C%E7%BC%96%E7%A0%81.html#%E7%A7%BB%E7%A0%81">移码</a></li>
+<li><a href="%E6%95%B0%E5%88%B6%E5%92%8C%E7%BC%96%E7%A0%81.html#%E5%AE%9A%E7%82%B9%E5%B0%8F%E6%95%B0">定点小数</a></li>
+<li><a href="%E6%95%B0%E5%88%B6%E5%92%8C%E7%BC%96%E7%A0%81.html#%E5%A5%87%E5%81%B6%E6%A0%A1%E9%AA%8C%E7%A0%81">奇偶校验码</a></li>
+</ul>
+<h2 id="进位计数制"><a class="header" href="#进位计数制">进位计数制</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240608165133.png" alt="" /></p>
+<h2 id="bcd-码"><a class="header" href="#bcd-码">BCD 码</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240608170130.png" alt="" /></p>
+<h2 id="无符号整数的表示与运算"><a class="header" href="#无符号整数的表示与运算">无符号整数的表示与运算</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240608171415.png" alt="" /></p>
+<h2 id="有符号整数的表示与运算原码反码补码"><a class="header" href="#有符号整数的表示与运算原码反码补码">有符号整数的表示与运算——原码、反码、补码</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609142741.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609142538.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609143846.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609143959.png" alt="" /></p>
+<h2 id="原反补码的特性对比"><a class="header" href="#原反补码的特性对比">原反补码的特性对比</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609144438.png" alt="" /></p>
+<h2 id="移码"><a class="header" href="#移码">移码</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609150854.png" alt="" /></p>
+<h2 id="定点小数"><a class="header" href="#定点小数">定点小数</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609151555.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627193037.png" alt="" /></p>
+<h2 id="奇偶校验码"><a class="header" href="#奇偶校验码">奇偶校验码</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609153445.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="运算方法和运算电路"><a class="header" href="#运算方法和运算电路">运算方法和运算电路</a></h1>
+<ul>
+<li><a href="%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF.html#%E7%94%B5%E8%B7%AF%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E5%8A%A0%E6%B3%95%E5%99%A8%E8%AE%BE%E8%AE%A1">电路的基本原理、加法器设计</a></li>
+<li><a href="%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF.html#%E5%B9%B6%E8%A1%8C%E8%BF%9B%E4%BD%8D%E5%8A%A0%E6%B3%95%E5%99%A8">并行进位加法器</a></li>
+<li><a href="%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF.html#%E8%A1%A5%E7%A0%81%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97%E5%99%A8">补码加减运算器</a></li>
+<li><a href="%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF.html#%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97%E5%92%8C%E6%BA%A2%E5%87%BA%E5%88%A4%E6%96%AD">加减运算和溢出判断</a></li>
+<li><a href="%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF.html#%E6%A0%87%E5%BF%97%E4%BD%8D%E7%9A%84%E7%94%9F%E6%88%90">标志位的生成</a></li>
+<li><a href="%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF.html#%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E7%A7%BB%E4%BD%8D%E8%BF%90%E7%AE%97">定点数的移位运算</a></li>
+<li><a href="%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF.html#%E5%8E%9F%E7%A0%81%E7%9A%84%E4%B9%98%E6%B3%95%E8%BF%90%E7%AE%97">原码的乘法运算</a></li>
+<li><a href="%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF.html#%E8%A1%A5%E7%A0%81%E7%9A%84%E4%B9%98%E6%B3%95%E8%BF%90%E7%AE%97">补码的乘法运算</a></li>
+<li><a href="%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF.html#%E5%8E%9F%E7%A0%81%E7%9A%84%E9%99%A4%E6%B3%95%E8%BF%90%E7%AE%97">原码的除法运算</a></li>
+<li><a href="%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF.html#%E8%A1%A5%E7%A0%81%E7%9A%84%E9%99%A4%E6%B3%95%E8%BF%90%E7%AE%97">补码的除法运算</a></li>
+<li><a href="%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF.html#c%E8%AF%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">C语言类型转换</a></li>
+<li><a href="%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF.html#%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8%E5%92%8C%E6%8E%92%E5%88%97">数据的存储和排列</a></li>
+</ul>
+<h2 id="电路的基本原理加法器设计"><a class="header" href="#电路的基本原理加法器设计">电路的基本原理、加法器设计</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609154426.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609154817.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609154955.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609155731.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609160120.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609160620.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609160803.png" alt="" /></p>
+<h2 id="并行进位加法器"><a class="header" href="#并行进位加法器">并行进位加法器</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240609161746.png" alt="" /></p>
+<h2 id="补码加减运算器"><a class="header" href="#补码加减运算器">补码加减运算器</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627193622.png" alt="" /></p>
+<h2 id="加减运算和溢出判断"><a class="header" href="#加减运算和溢出判断">加减运算和溢出判断</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610143617.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610144425.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610145050.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610145352.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610150155.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610150801.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610150853.png" alt="" /></p>
+<h2 id="标志位的生成"><a class="header" href="#标志位的生成">标志位的生成</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610152326.png" alt="" /></p>
+<h2 id="定点数的移位运算"><a class="header" href="#定点数的移位运算">定点数的移位运算</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610153558.png" alt="" /></p>
+<h2 id="原码的乘法运算"><a class="header" href="#原码的乘法运算">原码的乘法运算</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610160157.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610161534.png" alt="" /></p>
+<h2 id="补码的乘法运算"><a class="header" href="#补码的乘法运算">补码的乘法运算</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610161825.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610164244.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610164342.png" alt="" /></p>
+<h2 id="原码的除法运算"><a class="header" href="#原码的除法运算">原码的除法运算</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610170026.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610171302.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610171325.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610171659.png" alt="" /></p>
+<h2 id="补码的除法运算"><a class="header" href="#补码的除法运算">补码的除法运算</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610175838.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610181819.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610181905.png" alt="" /></p>
+<h2 id="c语言类型转换"><a class="header" href="#c语言类型转换">C语言类型转换</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610182314.png" alt="" /></p>
+<h2 id="数据的存储和排列"><a class="header" href="#数据的存储和排列">数据的存储和排列</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610182527.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240610182902.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="浮点数的表示与运算"><a class="header" href="#浮点数的表示与运算">浮点数的表示与运算</a></h1>
+<ul>
+<li><a href="%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97.html#%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA">浮点数的表示</a></li>
+<li><a href="%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97.html#ieee-754%E6%A0%87%E5%87%86">IEEE 754标准</a>
+<ul>
+<li><a href="%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97.html#%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%BF%90%E7%AE%97">浮点数的运算</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="浮点数的表示"><a class="header" href="#浮点数的表示">浮点数的表示</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611143237.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611143821.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611144819.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611144948.png" alt="" /></p>
+<h1 id="ieee-754标准"><a class="header" href="#ieee-754标准">IEEE 754标准</a></h1>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611145534.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611150217.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611151204.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611152019.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611152127.png" alt="" /></p>
+<h2 id="浮点数的运算"><a class="header" href="#浮点数的运算">浮点数的运算</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611162659.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611162906.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611163254.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240611163411.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="存储系统"><a class="header" href="#存储系统">存储系统</a></h1>
+<ul>
+<li><a href="%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F.html#%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">存储系统基本概念</a></li>
+<li><a href="%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F.html#%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8">主存储器</a>
+<ul>
+<li><a href="%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F.html#%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90">主存储器的基本组成</a></li>
+<li><a href="%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F.html#sram-%E5%92%8C-dram">SRAM 和 DRAM</a></li>
+<li><a href="%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F.html#%E5%8F%AA%E8%AF%BB%E5%AD%98%E5%82%A8%E5%99%A8-rom">只读存储器 ROM</a></li>
+<li><a href="%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F.html#%E5%8F%8C%E7%AB%AF%E5%8F%A3-ram-%E5%92%8C%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%AD%98%E5%82%A8%E5%99%A8">双端口 RAM 和多模块存储器</a></li>
+</ul>
+</li>
+<li><a href="%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F.html#%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8%E5%92%8Ccpu">主存储器和CPU</a></li>
+<li><a href="%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F.html#%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8">外部存储器</a></li>
+<li><a href="%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F.html#%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8">高速缓冲存储器</a></li>
+<li><a href="%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F.html#%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8">虚拟存储</a>
+<ul>
+<li><a href="%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F.html#%E9%A1%B5%E5%BC%8F%E5%AD%98%E5%82%A8%E5%99%A8">页式存储器</a></li>
+<li><a href="%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F.html#%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8">虚拟存储器</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="存储系统基本概念"><a class="header" href="#存储系统基本概念">存储系统基本概念</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627200338.png" alt="" /></p>
+<h2 id="主存储器"><a class="header" href="#主存储器">主存储器</a></h2>
+<h3 id="主存储器的基本组成"><a class="header" href="#主存储器的基本组成">主存储器的基本组成</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627200429.png" alt="" /></p>
+<h3 id="sram-和-dram"><a class="header" href="#sram-和-dram">SRAM 和 DRAM</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627200551.png" alt="" /></p>
+<h3 id="只读存储器-rom"><a class="header" href="#只读存储器-rom">只读存储器 ROM</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627200632.png" alt="" /></p>
+<h3 id="双端口-ram-和多模块存储器"><a class="header" href="#双端口-ram-和多模块存储器">双端口 RAM 和多模块存储器</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627200729.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627200806.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627200940.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627201016.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627201039.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627201256.png" alt="" /></p>
+<h2 id="主存储器和cpu"><a class="header" href="#主存储器和cpu">主存储器和CPU</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627201527.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627201702.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627201745.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627201810.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627201843.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627201928.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627202009.png" alt="" /></p>
+<h2 id="外部存储器"><a class="header" href="#外部存储器">外部存储器</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627202243.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627202124.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627202152.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627202036.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627202341.png" alt="" /></p>
+<h2 id="高速缓冲存储器"><a class="header" href="#高速缓冲存储器">高速缓冲存储器</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627202427.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627203247.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627203330.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627203408.png" alt="" /></p>
+<h2 id="虚拟存储"><a class="header" href="#虚拟存储">虚拟存储</a></h2>
+<h3 id="页式存储器"><a class="header" href="#页式存储器">页式存储器</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627203458.png" alt="" /></p>
+<h3 id="虚拟存储器"><a class="header" href="#虚拟存储器">虚拟存储器</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240627203644.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="指令系统"><a class="header" href="#指令系统">指令系统</a></h1>
+<ul>
+<li><a href="%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F.html#%E6%8C%87%E4%BB%A4%E6%A0%BC%E5%BC%8F">指令格式</a></li>
+<li><a href="%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F.html#%E6%8C%87%E4%BB%A4%E7%9A%84%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F">指令的寻址方式</a>
+<ul>
+<li><a href="%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F.html#%E6%8C%87%E4%BB%A4%E5%AF%BB%E5%9D%80">指令寻址</a></li>
+<li><a href="%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F.html#%E6%95%B0%E6%8D%AE%E5%AF%BB%E5%9D%80">数据寻址</a></li>
+</ul>
+</li>
+<li><a href="%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F.html#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80">汇编语言</a>
+<ul>
+<li><a href="%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F.html#risc-%E5%92%8C-cisc">RISC 和 CISC</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="指令格式"><a class="header" href="#指令格式">指令格式</a></h1>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240527164804.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240527174445.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240527174536.png" alt="" /></p>
+<h1 id="指令的寻址方式"><a class="header" href="#指令的寻址方式">指令的寻址方式</a></h1>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528164926.png" alt="" /></p>
+<h2 id="指令寻址"><a class="header" href="#指令寻址">指令寻址</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528152108.png" alt="" /></p>
+<h2 id="数据寻址"><a class="header" href="#数据寻址">数据寻址</a></h2>
+<p>每个形式地址都需要有对应的寻址特征</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528163841.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528165922.png" alt="" /></p>
+<p>例如累加器（ACC）对单地址指令格式来说是隐含寻址。</p>
+<p>隐含寻址的优点是有利于缩短指令字长，缺点是需增加存储操作数或隐含地址的硬件。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528170034.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528165130.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528165723.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528165818.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528165851.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528164007.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528164304.png" alt="" /></p>
+<p>基址寻址的作用</p>
+<p>基址寻址：将CPU中基址寄存器（BR）的内容加上指令格式中的形式地址A，而形成操作数的有效地址，即EA=(BR)+A</p>
+<p>优点：便于程序浮动 ，方便实现多道程序并发运行</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528164458.png" alt="" /></p>
+<p>变址寻址的作用</p>
+<p>在数组处理过程中，可设定A为数组的首地址，不断改变变址寄存器IX的内容，便可很容易形成数组中任一数据的地址，特别适合编制循环程序。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528164612.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528164730.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528163227.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528171206.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528171243.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528171356.png" alt="" /></p>
+<h1 id="汇编语言"><a class="header" href="#汇编语言">汇编语言</a></h1>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528183031.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528183322.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528183354.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528184030.png" alt="" /></p>
+<p>ptr: pointer，用于临时的强制类型转换</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528184221.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528184739.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528185258.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240528185415.png" alt="" /></p>
+<h2 id="risc-和-cisc"><a class="header" href="#risc-和-cisc">RISC 和 CISC</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530103212.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530103539.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="中央处理器cpu"><a class="header" href="#中央处理器cpu">中央处理器CPU</a></h1>
+<h1 id="中央处理器-cpu"><a class="header" href="#中央处理器-cpu">中央处理器 CPU</a></h1>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530103943.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530104444.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="cpu的功能和基本结构"><a class="header" href="#cpu的功能和基本结构">CPU的功能和基本结构</a></h1>
+<h1 id="cpu-的功能和基本结构"><a class="header" href="#cpu-的功能和基本结构">CPU 的功能和基本结构</a></h1>
+<p>CPU的基本功能</p>
+<p>1.指令控制。完成取指令、分析指令和执行指令的操作，即程序的顺序控制。</p>
+<p>2.操作控制。一条指令的功能往往是由若干操作信号的组合来实现的。CPU管理并产生由内存取出的每条指令的操作信号，把各种操作信号送往相应的部件，从而控制这些部件按指令的要求进行动作。</p>
+<p>3.时间控制。对各种操作加以时间上的控制。时间控制要为每条指令按时间顺序提供应有的控制信号。</p>
+<p>4.数据加工。对数据进行算术和逻辑运算。</p>
+<p>5.中断处理。对计算机运行过程中出现的异常情况和特殊请求进行处理。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530105623.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530114416.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530114500.png" alt="" /></p>
+<p>CPU内部单总线方式：将所有寄存器的输入端和输出端都连接到一条公共的通路上。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530114114.png" alt="" /></p>
+<p>暂存寄存器：用于暂存从主存读来的数据，这个数据不能存放在通用寄存器中，否则会破坏其原有内容。</p>
+<p>如：两个操作数分别来自主存和R0，最后结果存回R0，那么从主存中取来的操作数直接放入暂存器，就不会破坏运算前R0的内容。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530115241.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530115504.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530115651.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="指令执行过程"><a class="header" href="#指令执行过程">指令执行过程</a></h1>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530122435.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530122357.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240530122334.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531145402.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531145833.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531151301.png" alt="" /></p>
+<p>指令周期的数据流——执行周期</p>
+<p>执行周期的任务是根据IR中的指令字的操作码和操作数通过ALU操作产生执行结果。</p>
+<p>不同指令的执行周期操作不同，因此没有统一的数据流向</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531152030.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531152541.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531152742.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="数据通路"><a class="header" href="#数据通路">数据通路</a></h1>
+<ul>
+<li><a href="%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF.html#%E5%86%85%E9%83%A8%E6%80%BB%E7%BA%BF">内部总线</a></li>
+<li><a href="%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF.html#%E4%B8%93%E7%94%A8%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E6%96%B9%E5%BC%8F">专用数据通路方式</a></li>
+</ul>
+<h2 id="内部总线"><a class="header" href="#内部总线">内部总线</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531181220.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531182633.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531183720.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531183756.png" alt="" /></p>
+<p>不同教材中的间址周期的定义可能不同。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531184021.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531183629.png" alt="" /></p>
+<h2 id="专用数据通路方式"><a class="header" href="#专用数据通路方式">专用数据通路方式</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531184801.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531190014.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531190052.png" alt="" /></p>
+<p>（4）X→MAR
+M(MAR)→MDR
+(MDR) →ALU→ACC</p>
+<p>（5）Y→MAR
+M(MAR)→MDR
+(MDR)→ALU,(ACC)→ALU
+ALU→ACC</p>
+<p>（6）Z→MAR
+(ACC)→MDR
+(MDR)→M(MAR)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240531185844.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="控制器设计"><a class="header" href="#控制器设计">控制器设计</a></h1>
+<ul>
+<li><a href="%E6%8E%A7%E5%88%B6%E5%99%A8%E8%AE%BE%E8%AE%A1.html#%E7%A1%AC%E5%B8%83%E7%BA%BF%E6%8E%A7%E5%88%B6%E5%99%A8%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E6%8E%A7%E5%88%B6%E5%99%A8">硬布线控制器（组合逻辑控制器）</a></li>
+<li><a href="%E6%8E%A7%E5%88%B6%E5%99%A8%E8%AE%BE%E8%AE%A1.html#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E5%99%A8%E5%AD%98%E5%82%A8%E9%80%BB%E8%BE%91%E6%8E%A7%E5%88%B6%E5%99%A8">微程序控制器（存储逻辑控制器）</a>
+<ul>
+<li><a href="%E6%8E%A7%E5%88%B6%E5%99%A8%E8%AE%BE%E8%AE%A1.html#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86">微程序控制器的基本原理</a></li>
+<li><a href="%E6%8E%A7%E5%88%B6%E5%99%A8%E8%AE%BE%E8%AE%A1.html#%E5%BE%AE%E6%8C%87%E4%BB%A4%E7%9A%84%E8%AE%BE%E8%AE%A1">微指令的设计</a></li>
+<li><a href="%E6%8E%A7%E5%88%B6%E5%99%A8%E8%AE%BE%E8%AE%A1.html#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E5%8D%95%E5%85%83%E7%9A%84%E8%AE%BE%E8%AE%A1">微程序控制单元的设计</a></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601143328.png" alt="" /></p>
+<h2 id="硬布线控制器组合逻辑控制器"><a class="header" href="#硬布线控制器组合逻辑控制器">硬布线控制器（组合逻辑控制器）</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601144637.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601144720.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601144948.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601150210.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601150659.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601151019.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601151328.png" alt="" /></p>
+<p>硬布线控制器：微操作控制信号由组合逻辑电路根据当前的指令码、状态和时序，即时产生</p>
+<p>时序信息包含机器周期、节拍</p>
+<h2 id="微程序控制器存储逻辑控制器"><a class="header" href="#微程序控制器存储逻辑控制器">微程序控制器（存储逻辑控制器）</a></h2>
+<h3 id="微程序控制器的基本原理"><a class="header" href="#微程序控制器的基本原理">微程序控制器的基本原理</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601153333.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601153804.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601154419.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601154623.png" alt="" /></p>
+<h3 id="微指令的设计"><a class="header" href="#微指令的设计">微指令的设计</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601155824.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601155757.png" alt="" /></p>
+<p>微指令的编码方式又称为微指令的控制方式，它是指如何对微指令的控制字段进行编码，以形成控制信号。编码的目标是在保证速度的情况下，尽量缩短微指令字长。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601160731.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601161006.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601161300.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601162010.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601162805.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601162831.png" alt="" /></p>
+<h3 id="微程序控制单元的设计"><a class="header" href="#微程序控制单元的设计">微程序控制单元的设计</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601163315.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601163557.png" alt="" /></p>
+<p>微程序设计分类</p>
+<p>1.静态微程序设计和动态微程序设计</p>
+<p>静态 微程序无需改变，采用ROM</p>
+<p>动态 通过改变微指令和微程序改变机器指令</p>
+<p>有利于仿真，采用EPROM</p>
+<p>2.毫微程序设计</p>
+<p>毫微程序设计的基本概念</p>
+<p>微程序设计 用微程序解释机器指令</p>
+<p>毫微程序设计用毫微程序解释微程序</p>
+<p>毫微指令与微指令的关系好比微指令与机器指令的关系</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601164205.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601164245.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="指令流水线"><a class="header" href="#指令流水线">指令流水线</a></h1>
+<ul>
+<li><a href="%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF.html#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">指令流水线的基本概念</a></li>
+<li><a href="%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF.html#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0%E5%8F%8A%E5%88%86%E7%B1%BB">指令流水线的影响因素及分类</a>
+<ul>
+<li><a href="%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF.html#%E5%BD%B1%E5%93%8D%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%9B%A0%E7%B4%A0">影响流水线的因素</a></li>
+<li><a href="%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF.html#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%88%86%E7%B1%BB">流水线的分类</a></li>
+<li><a href="%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF.html#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%A4%9A%E5%8F%91%E6%8A%80%E6%9C%AF">流水线的多发技术</a></li>
+</ul>
+</li>
+<li><a href="%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF.html#%E4%BA%94%E6%AE%B5%E5%BC%8F%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF">五段式指令流水线</a></li>
+</ul>
+<h2 id="指令流水线的基本概念"><a class="header" href="#指令流水线的基本概念">指令流水线的基本概念</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162125.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162208.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162238.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162409.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162432.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162503.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162026.png" alt="" /></p>
+<h2 id="指令流水线的影响因素及分类"><a class="header" href="#指令流水线的影响因素及分类">指令流水线的影响因素及分类</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602163637.png" alt="" /></p>
+<h3 id="影响流水线的因素"><a class="header" href="#影响流水线的因素">影响流水线的因素</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602164250.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602164331.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602164708.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602165248.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602165324.png" alt="" /></p>
+<h3 id="流水线的分类"><a class="header" href="#流水线的分类">流水线的分类</a></h3>
+<p>1.部件功能级、处理机级和处理机间级流水线</p>
+<p>根据流水线使用的级别的不同，流水线可分为部件功能级流水线、处理机级流水线和处理机间流水线。</p>
+<p>部件功能级流水就是将复杂的算术逻辑运算组成流水线工作方式。例如，可将浮点加法操作分成求阶差、对阶、尾数相加以及结果规格化等4个子过程。</p>
+<p>处理机级流水是把一条指令解释过程分成多个子过程，如前面提到的取指、译码、执行、访存及写回5个子过程。</p>
+<p>处理机间流水是一种宏流水，其中每一个处理机完成某一专门任务，各个处理机所得到的结果需存放在与下一个处理机所共享的存储器中。</p>
+<p>2.单功能流水线和多功能流水线</p>
+<p>按流水线可以完成的功能，流水线可分为单功能流水线和多功能流水线。</p>
+<p>单功能流水线指只能实现一种固定的专门功能的流水线；</p>
+<p>多功能流水线指通过各段间的不同连接方式可以同时或不同时地实现多种功能的流水线。</p>
+<p>3.动态流水线和静态流水线</p>
+<p>按同一时间内各段之间的连接方式，流水线可分为静态流水线和动态流水线。</p>
+<p>静态流水线指在同一时间内，流水线的各段只能按同一种功能的连接方式工作。</p>
+<p>动态流水线指在同一时间内，当某些段正在实现某种运算时，另一些段却正在进行另一种运算。这样对提高流水线的效率很有好处，但会使流水线控制变得很复杂。</p>
+<p>4.线性流水线和非线性流水线</p>
+<p>按流水线的各个功能段之间是否有反馈信号，流水线可分为线性流水线与非线性流水线。</p>
+<p>线性流水线牛，从输入到输出，每个功能段只允许经过一次，不存在反馈回路。</p>
+<p>非线性流水线存在反馈回路，从输入到输出过程中，某些功能段将数次通过流水线，这种流水线
+适合进行线性递归的运算。</p>
+<h3 id="流水线的多发技术"><a class="header" href="#流水线的多发技术">流水线的多发技术</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602170339.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602170538.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602170642.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602170730.png" alt="" /></p>
+<h2 id="五段式指令流水线"><a class="header" href="#五段式指令流水线">五段式指令流水线</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602181724.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602181939.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602182126.png" alt="" />
+<img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602182213.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602182431.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602182726.png" alt="" /></p>
+<p>注意：WB写回寄存器是指写回通用寄存器</p>
+<p>转移指令中需要修改PC的值，上面这张图中<code>(PC) + 指令字长</code>才是下一条指令的地址</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602181658.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="多处理器系统"><a class="header" href="#多处理器系统">多处理器系统</a></h1>
+<ul>
+<li><a href="%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8%E7%B3%BB%E7%BB%9F.html#sisdsimdmimd%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">SISD、SIMD、MIMD的基本概念</a></li>
+<li><a href="%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8%E7%B3%BB%E7%BB%9F.html#%E5%90%91%E9%87%8F%E5%A4%84%E7%90%86%E5%99%A8">向量处理器</a></li>
+<li><a href="%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8%E7%B3%BB%E7%BB%9F.html#%E5%A4%9A%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8%E5%92%8C%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8">多核处理器和共享内存多处理器</a></li>
+<li><a href="%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8%E7%B3%BB%E7%BB%9F.html#%E7%A1%AC%E4%BB%B6%E5%A4%9A%E7%BA%BF%E7%A8%8B">硬件多线程</a></li>
+</ul>
+<h2 id="sisdsimdmimd的基本概念"><a class="header" href="#sisdsimdmimd的基本概念">SISD、SIMD、MIMD的基本概念</a></h2>
+<p>基于指令流的数量和数据流的数量，对计算机体系结构分为SISD、SIMD、MISD和MIMD四类。常规的单处理器属于SISD，而常规的多处理器属于MIMD。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185218.png" alt="" /></p>
+<p>1.单指合流单数据流（SISD）结构</p>
+<p>SISD是传统的串行计算机结构，这种计算机通常仅包含一个处理器和一个存储器，处理器在一段时间内仅执行一条指令，按指令流规定的顺序串行执行指令流中的若干条指令。为了提高速度，有些SISD计算机采用流水线的方式，因此，SISD处理器有时会设置多个功能部件，并采用多模块交叉方式组织存储器。本书前面介绍的内容多属于SISD结构。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602184230.png" alt="" /></p>
+<p>2.单指合流多数据流（SIMD）结构</p>
+<p>SIMD是指一个指令流同时对多个数据流进行处理，一般称为数据级并行技术。这种结构的计算机通常由一个指令控制部件、多个处理单元组成。每个处理单元虽然都执行的是同一条指令，但每个单元都有自己的地址寄存器，这样每个单元都有不同的数据地址，因此，不同处理单元执行的同一条指令所处理的数据是不同的。一个顺序应用程序编译后，可能按SISD组织并运行于串行硬件上，也可能按SIMD组织并运行于并行硬件上。</p>
+<p>SIMD在使用for循环处理数组时最有效，比如，一条分别对16对数据进行运算的SIMD指令如果在16个ALU中同时运算，则仅需一次运算时间就能完成运算。SIMD在使用case或switch语句时效率最低，此时每个执行单元必须根据不同的数据执行不同的操作。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602184526.png" alt="" /></p>
+<p>3.多指合流单数据流（MISD）结构</p>
+<p>MISD是指同时执行多条指令，处理同一个数据，实际上不存在这样的计算机。</p>
+<p>4.多指合流多数据流（MIMD）结构</p>
+<p>MIMD是指同时执行多条指令，处理多个数据。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602184736.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185305.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185002.png" alt="" /></p>
+<h2 id="向量处理器"><a class="header" href="#向量处理器">向量处理器</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185457.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185550.png" alt="" /></p>
+<h2 id="多核处理器和共享内存多处理器"><a class="header" href="#多核处理器和共享内存多处理器">多核处理器和共享内存多处理器</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185722.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185805.png" alt="" /></p>
+<h2 id="硬件多线程"><a class="header" href="#硬件多线程">硬件多线程</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602190459.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602190936.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602191047.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="总线"><a class="header" href="#总线">总线</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="总线概述"><a class="header" href="#总线概述">总线概述</a></h1>
+<ul>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%A6%82%E8%BF%B0.html#%E6%9C%AC%E8%8A%82%E5%9B%9E%E9%A1%BE">本节回顾</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%A6%82%E8%BF%B0.html#%E6%80%BB%E7%BA%BF%E7%9A%84%E7%89%B9%E7%82%B9">总线的特点</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%A6%82%E8%BF%B0.html#%E6%80%BB%E7%BA%BF%E7%9A%84%E7%89%B9%E6%80%A7">总线的特性</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%A6%82%E8%BF%B0.html#%E6%80%BB%E7%BA%BF%E7%9A%84%E5%88%86%E7%B1%BB">总线的分类</a>
+<ul>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%A6%82%E8%BF%B0.html#%E4%B8%B2%E8%A1%8C%E6%80%BB%E7%BA%BF%E4%B8%8E%E5%B9%B6%E8%A1%8C%E6%80%BB%E7%BA%BF">串行总线与并行总线</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%A6%82%E8%BF%B0.html#%E7%89%87%E5%86%85%E6%80%BB%E7%BA%BF%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF%E5%92%8C%E9%80%9A%E4%BF%A1%E6%80%BB%E7%BA%BF">片内总线、系统总线和通信总线</a></li>
+</ul>
+</li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%A6%82%E8%BF%B0.html#%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF%E7%9A%84%E7%BB%93%E6%9E%84">系统总线的结构</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%A6%82%E8%BF%B0.html#%E6%80%BB%E7%BA%BF%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87">总线的性能指标</a></li>
+</ul>
+<h2 id="本节回顾"><a class="header" href="#本节回顾">本节回顾</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603154755.png" alt="" /></p>
+<h2 id="总线的特点"><a class="header" href="#总线的特点">总线的特点</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603152307.png" alt="" /></p>
+<h2 id="总线的特性"><a class="header" href="#总线的特性">总线的特性</a></h2>
+<p>1.机械特性：尺寸、形状、管脚数、排列顺序</p>
+<p>2.电气特性：传输方向和有效的电平范围</p>
+<p>3.功能特性：每根传输线的功能(地址、数据、控制)</p>
+<p>4.时间特性：信号的时序关系</p>
+<h2 id="总线的分类"><a class="header" href="#总线的分类">总线的分类</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603154958.png" alt="" /></p>
+<h3 id="串行总线与并行总线"><a class="header" href="#串行总线与并行总线">串行总线与并行总线</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603155020.png" alt="" /></p>
+<h3 id="片内总线系统总线和通信总线"><a class="header" href="#片内总线系统总线和通信总线">片内总线、系统总线和通信总线</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603155104.png" alt="" /></p>
+<p>总线的分类（按总线功能）</p>
+<p>1.片内总线</p>
+<p>片内总线是芯片内部的总线。</p>
+<p>它是CPU芯片内部寄存器与寄存器之间、寄存器与ALU之间的公共连接线。</p>
+<p>2.系统总线</p>
+<p>系统总线是计算机系统内各功能部件（CPU、主存、V/O接口）之间相互连接的总线。</p>
+<p>按系统总线传输信息内容的不同，又可分为3类：数据总线、地址总线和控制总线。</p>
+<p>1）数据总线用来传输各功能部件之间的数据信息，它是双向传输总线，其位数与机器字长、存储字长有关。</p>
+<p>2）地址总线用来指出数据总线上的源数据或目的数据所在的主存单元或/O端口的地址，它是单向传输总线，地址总线的位数与主存地址空间的大小有关。</p>
+<p>3）控制总线传输的是控制信息，包括CPU送出的控制命令和主存（或外设）返回CPU的反馈信号。</p>
+<p>3.通信总线</p>
+<p>通信总线是用于计算机系统之间或计算机系统与其他系统（如远程通信设备、测试设备）之间信息传送的总线，通信总线也称为外部总线。</p>
+<p>数据通路表示的是逻辑上数据流经的路径</p>
+<p>数据总线是承载的媒介</p>
+<p>地址总线也是承载的媒介</p>
+<h2 id="系统总线的结构"><a class="header" href="#系统总线的结构">系统总线的结构</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603155427.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603155754.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603155827.png" alt="" /></p>
+<p>系统工作效率较低原因：同一时刻，只能由一条总线在工作</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603155928.png" alt="" /></p>
+<h2 id="总线的性能指标"><a class="header" href="#总线的性能指标">总线的性能指标</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603161136.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603162252.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603162210.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603162620.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603162807.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="总线仲裁"><a class="header" href="#总线仲裁">总线仲裁</a></h1>
+<ul>
+<li><a href="%E6%80%BB%E7%BA%BF%E4%BB%B2%E8%A3%81.html#%E6%80%BB%E7%BA%BF%E4%BB%B2%E8%A3%81%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">总线仲裁的基本概念</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E4%BB%B2%E8%A3%81.html#%E9%9B%86%E4%B8%AD%E4%BB%B2%E8%A3%81%E6%96%B9%E5%BC%8F">集中仲裁方式</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E4%BB%B2%E8%A3%81.html#%E5%88%86%E5%B8%83%E4%BB%B2%E8%A3%81%E6%96%B9%E5%BC%8F">分布仲裁方式</a></li>
+</ul>
+<h2 id="总线仲裁的基本概念"><a class="header" href="#总线仲裁的基本概念">总线仲裁的基本概念</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603163158.png" alt="" /></p>
+<h2 id="集中仲裁方式"><a class="header" href="#集中仲裁方式">集中仲裁方式</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603164209.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603164959.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603165332.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603165437.png" alt="" /></p>
+<h2 id="分布仲裁方式"><a class="header" href="#分布仲裁方式">分布仲裁方式</a></h2>
+<p>特点：不需要中央仲裁器，每个潜在的主模块都有自己的仲裁器和仲裁号，多个仲裁器竞争使用总线。</p>
+<p>当设备有总线请求时，它们就把各自唯一的仲裁号发送到共享的仲裁总线上；</p>
+<p>每个仲裁器将从仲裁总线上得到的仲裁号与自己的仲裁号进行比较；</p>
+<p>如果仲裁总线上的号优先级高，则它的总线请求不予响应，并撤销它的仲裁号；</p>
+<p>最后，获胜者的仲裁号保留在仲裁总线上。</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="总线操作和定时"><a class="header" href="#总线操作和定时">总线操作和定时</a></h1>
+<ul>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%93%8D%E4%BD%9C%E5%92%8C%E5%AE%9A%E6%97%B6.html#%E6%9C%AC%E8%8A%82%E5%9B%9E%E9%A1%BE">本节回顾</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%93%8D%E4%BD%9C%E5%92%8C%E5%AE%9A%E6%97%B6.html#%E6%80%BB%E7%BA%BF%E4%BC%A0%E8%BE%93%E7%9A%84%E5%9B%9B%E4%B8%AA%E9%98%B6%E6%AE%B5">总线传输的四个阶段</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%93%8D%E4%BD%9C%E5%92%8C%E5%AE%9A%E6%97%B6.html#%E5%90%8C%E6%AD%A5%E5%AE%9A%E6%97%B6%E6%96%B9%E5%BC%8F">同步定时方式</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%93%8D%E4%BD%9C%E5%92%8C%E5%AE%9A%E6%97%B6.html#%E5%BC%82%E6%AD%A5%E5%AE%9A%E6%97%B6%E6%96%B9%E5%BC%8F">异步定时方式</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%93%8D%E4%BD%9C%E5%92%8C%E5%AE%9A%E6%97%B6.html#%E5%8D%8A%E5%90%8C%E6%AD%A5%E9%80%9A%E4%BF%A1">半同步通信</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%93%8D%E4%BD%9C%E5%92%8C%E5%AE%9A%E6%97%B6.html#%E5%88%86%E7%A6%BB%E5%BC%8F%E9%80%9A%E4%BF%A1">分离式通信</a></li>
+</ul>
+<h2 id="本节回顾-1"><a class="header" href="#本节回顾-1">本节回顾</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604151433.png" alt="" /></p>
+<h2 id="总线传输的四个阶段"><a class="header" href="#总线传输的四个阶段">总线传输的四个阶段</a></h2>
+<p>总线周期的四个阶段</p>
+<p>1）申请分配阶段：由需要使用总线的主模块（或主设备）提出申请，经总线仲裁机构决定将下一传输周期的总线使用权授予某一申请者。也可将此阶段细分为传输请求和总线仲裁两个阶段。</p>
+<p>2）寻址阶段：获得使用权的主模块通过总线发出本次要访问的从模块的地址及有关命令，启动参与本次传输的从模块。</p>
+<p>3）传输阶段：主模块和从模块进行数据交换，可单向或双向进行数据传送。</p>
+<p>4）结束阶段：主模块的有关信息均从系统总线上撤除，让出总线使用权。</p>
+<p>总线定时是指总线在双方交换数据的过程中需要时间上配合关系的控制，这种控制称为总线定时，它的实质是一种协议或规则，主要分为如下四种类型：</p>
+<ul>
+<li>同步通信（同步定时方式）：由统一时钟控制数据传送</li>
+<li>异步通信（异步定时方式）：采用应答方式，没有公共时钟标准</li>
+<li>半同步通信：同步、异步结合</li>
+<li>分离式通信：充分挖掘系统总线每瞬闯的潜力</li>
+</ul>
+<h2 id="同步定时方式"><a class="header" href="#同步定时方式">同步定时方式</a></h2>
+<p>同步定时方式是指系统采用一个统一的时钟信号来协调发送和接收双方的传送定时关系。</p>
+<p>若干个时钟产生相等的时间间隔，每个间隔构成一个总线周期。</p>
+<p>在一个总线周期中，发送方和接收方可进行一次数据传送。</p>
+<p>因为采用统一的时钟，每个部件或设备发送或接收信息都在固定的总线传送周期中，一个总线的传送周期结束，下一个总线传送周期开始。</p>
+<p>优点：传送速度快，具有较高的传输速率；总线控制逻辑简单。</p>
+<p>缺点：主从设备属于强制性同步；不能及时进行数据通信的有效性检验，可靠性较差。</p>
+<p>同步通信适用于总线长度较短及总线所接部件的存取时间比较接近的系统。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604145437.png" alt="" /></p>
+<h2 id="异步定时方式"><a class="header" href="#异步定时方式">异步定时方式</a></h2>
+<p>异步定时方式</p>
+<p>在异步定时方式中，没有统一的时钟，也没有固定的时间间隔，完全依靠传送双方相互制约的“握手”信号来实现定时控制。</p>
+<p>主设备提出交换信息的“请求”信号，经接口传送到从设备；从设备接到主设备的请求后，通过接口向主设备发出“回答”信号。</p>
+<p>根据“请求”和“回答”信号的撤销是否互锁，分为以下3种类型。</p>
+<p>1）不互锁方式</p>
+<p>2）半互锁方式</p>
+<p>3）全互锁方式</p>
+<p>优点：总线周期长度可变，能保证两个工作速度相差很大的部件或设备之间可靠地进行信息交换，自动适应时间的配合。</p>
+<p>缺点：比同步控制方式稍复杂一些，速度比同步定时方式慢。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604150129.png" alt="" /></p>
+<h2 id="半同步通信"><a class="header" href="#半同步通信">半同步通信</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604150650.png" alt="" /></p>
+<h2 id="分离式通信"><a class="header" href="#分离式通信">分离式通信</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604151218.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="总线标准"><a class="header" href="#总线标准">总线标准</a></h1>
+<ul>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%A0%87%E5%87%86.html#%E6%80%BB%E7%BA%BF%E6%A0%87%E5%87%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">总线标准的基本概念</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%A0%87%E5%87%86.html#%E6%80%BB%E7%BA%BF%E6%A0%87%E5%87%86%E7%9A%84%E5%8F%91%E5%B1%95">总线标准的发展</a></li>
+<li><a href="%E6%80%BB%E7%BA%BF%E6%A0%87%E5%87%86.html#%E4%B8%BA%E4%BD%95%E4%B8%B2%E8%A1%8C%E6%80%BB%E7%BA%BF%E5%8F%96%E4%BB%A3%E5%B9%B6%E8%A1%8C%E6%80%BB%E7%BA%BF">为何串行总线取代并行总线</a></li>
+</ul>
+<h2 id="总线标准的基本概念"><a class="header" href="#总线标准的基本概念">总线标准的基本概念</a></h2>
+<p>总线标准是国际上公布或推荐的互连各个模块的标准，它是把各种不同的模块组成计算机系统时必须遵守的规范。按总线标准设计的接口可视为通用接口，在接口的两端，任何一方只需根据总线标准的要求完成自身方面的功能要求，而无须了解对方接口的要求。</p>
+<p>根据总线在计算机系统中的位置，可分为如下几种：</p>
+<p>系统总线：通常与CPU直接相连，用于连接CPU与北桥芯片、或CPU与主存等</p>
+<p>局部总线：没有直接与CPU连接，通常是连接高速的北桥芯片，用于连接了很多重要的硬件部件（如显卡、声卡等）</p>
+<p>设备总线、通信总线：通常由南桥芯片控制，用于连接计算机与计算机，或连接计算机与外部I/O设备</p>
+<h2 id="总线标准的发展"><a class="header" href="#总线标准的发展">总线标准的发展</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604152958.png" alt="" /></p>
+<h2 id="为何串行总线取代并行总线"><a class="header" href="#为何串行总线取代并行总线">为何串行总线取代并行总线</a></h2>
+<p>并行总线：用m根线每次传送m个比特，用高/低电平表示1/0，通常采用同步定时方式，由于线间信号干扰，因此总线工作频率不能太高。另外，各条线不能有长度差，长距离并行传输时工艺难度大。</p>
+<p>串行总线：用两根线每次传送一个比特，采用“差模信号”表示1/0，通常采用异步定时方式，总线工作频率可以很高。现在的串行总线通常基于包传输，如80bit为一个数据包，包与包之间有先后关系，因此可以用多个数据通路分别串行传输多个数据包。因此某种程度上现在的串行总线也有“并行”的特点</p>
+<p>串行总线可以有多个数据通路。</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="输入输出系统"><a class="header" href="#输入输出系统">输入输出系统</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<!-- toc --><div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="输入输出系统基本概念"><a class="header" href="#输入输出系统基本概念">输入输出系统基本概念</a></h1>
+<ul>
+<li><a href="%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E-io-%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F">输入输出系统与 I/O 控制方式</a></li>
+<li><a href="%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html#%E5%A4%96%E9%83%A8%E8%AE%BE%E5%A4%87">外部设备</a></li>
+</ul>
+<h2 id="输入输出系统与-io-控制方式"><a class="header" href="#输入输出系统与-io-控制方式">输入输出系统与 I/O 控制方式</a></h2>
+<p>I/O 设备就是可以将数据输入到计算机，或者可以接收计算机输出数据的外部设备</p>
+<p>I/O接口：又称I/O控制器（I/O Controller）、设备控制器，负责协调主机与外部设备之间的数据传输</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604182025.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604182211.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604182342.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604182503.png" alt="" /></p>
+<p>通道是具有特殊功能的处理器，能对I/O设备进行统一管理。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604182925.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604183233.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604183636.png" alt="" /></p>
+<h2 id="外部设备"><a class="header" href="#外部设备">外部设备</a></h2>
+<p>输入设备：鼠标、键盘</p>
+<p>输出设备：显示器、打印机</p>
+<p>外存储器：磁盘存储器、磁盘阵列、光盘存储器、固态硬盘</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604184440.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604184243.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604184850.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="io接口"><a class="header" href="#io接口">IO接口</a></h1>
+<h1 id="io-接口"><a class="header" href="#io-接口">I/O 接口</a></h1>
+<ul>
+<li><a href="IO%E6%8E%A5%E5%8F%A3.html#io-%E6%8E%A5%E5%8F%A3%E6%A6%82%E8%A7%88">I/O 接口概览</a></li>
+<li><a href="IO%E6%8E%A5%E5%8F%A3.html#io%E6%8E%A5%E5%8F%A3%E4%BD%9C%E7%94%A8">IO接口作用</a></li>
+<li><a href="IO%E6%8E%A5%E5%8F%A3.html#io%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86">IO接口的工作原理</a></li>
+<li><a href="IO%E6%8E%A5%E5%8F%A3.html#%E6%8E%A5%E5%8F%A3%E4%B8%8E%E7%AB%AF%E5%8F%A3">接口与端口</a></li>
+<li><a href="IO%E6%8E%A5%E5%8F%A3.html#io%E7%AB%AF%E5%8F%A3%E5%8F%8A%E5%85%B6%E7%BC%96%E5%9D%80">I/O端口及其编址</a></li>
+<li><a href="IO%E6%8E%A5%E5%8F%A3.html#io-%E6%8E%A5%E5%8F%A3%E7%9A%84%E7%B1%BB%E5%9E%8B">I/O 接口的类型</a></li>
+</ul>
+<h2 id="io-接口概览"><a class="header" href="#io-接口概览">I/O 接口概览</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604192311.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604192215.png" alt="" /></p>
+<h2 id="io接口作用"><a class="header" href="#io接口作用">IO接口作用</a></h2>
+<p>I/O 接口作用：</p>
+<ul>
+<li>数据缓冲：通过数据缓冲寄存器（DBR）达到主机和外设工作速度的匹配</li>
+<li>错误或状态监测：通过状态寄存器反馈设备的各种错误、状态信息，供CPU查用</li>
+<li>控制和定时：接收从控制总线发来的控制信号、时钟信号</li>
+<li>数据格式转换：串-并、并-串等格式转换</li>
+<li>与主机和设备通信：实现主机一I/O接口一I/O设备之间的通信</li>
+</ul>
+<h2 id="io接口的工作原理"><a class="header" href="#io接口的工作原理">IO接口的工作原理</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604191308.png" alt="" /></p>
+<h2 id="接口与端口"><a class="header" href="#接口与端口">接口与端口</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604191640.png" alt="" /></p>
+<h2 id="io端口及其编址"><a class="header" href="#io端口及其编址">I/O端口及其编址</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604191702.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240604192137.png" alt="" /></p>
+<h2 id="io-接口的类型"><a class="header" href="#io-接口的类型">I/O 接口的类型</a></h2>
+<p>按数据传送方式可分为</p>
+<ul>
+<li>并行接口：一个字节或一个字所有位同时传送。</li>
+<li>串行接口：一位一位地传送。</li>
+</ul>
+<p>注：这里所说的数据传送方式指的是外设和接口一侧的传送方式。接口要完成数据格式转换。</p>
+<p>按主机访问I/O设备的控制方式可分为</p>
+<ul>
+<li>程序查询接口</li>
+<li>中断接口</li>
+<li>DMA接口</li>
+</ul>
+<p>按功能选择的灵活性可分为</p>
+<ul>
+<li>可编程接口</li>
+<li>不可编程接口</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="io控制方式"><a class="header" href="#io控制方式">IO控制方式</a></h1>
+<h1 id="io控制方式"><a class="header" href="#io控制方式">I/O控制方式</a></h1>
+<ul>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E7%A8%8B%E5%BA%8F%E6%9F%A5%E8%AF%A2%E6%96%B9%E5%BC%8F">程序查询方式</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%AD%E6%96%B9%E5%BC%8F">程序中断方式</a>
+<ul>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E4%B8%AD%E6%96%AD%E8%AF%B7%E6%B1%82%E7%9A%84%E5%88%86%E7%B1%BB">中断请求的分类</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E4%B8%AD%E6%96%AD%E5%88%A4%E4%BC%98-%E4%BC%98%E5%85%88%E7%BA%A7%E8%AE%BE%E7%BD%AE">中断判优-优先级设置</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B">中断处理过程</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E5%A4%9A%E9%87%8D%E4%B8%AD%E6%96%AD">多重中断</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E4%B8%AD%E6%96%AD%E5%B1%8F%E8%94%BD%E6%8A%80%E6%9C%AF">中断屏蔽技术</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F%E5%B0%8F%E7%BB%93">中断系统小结</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%AD%E6%96%B9%E5%BC%8F%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE">程序中断方式传输数据</a></li>
+</ul>
+</li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#dma-%E6%96%B9%E5%BC%8F">DMA 方式</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E9%80%9A%E9%81%93%E6%96%B9%E5%BC%8F">通道方式</a>
+<ul>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E9%80%9A%E9%81%93%E7%9A%84%E5%8A%9F%E8%83%BD">通道的功能</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E9%80%9A%E9%81%93%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BB%93%E6%9E%84">通道的类型和结构</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E9%80%9A%E9%81%93%E7%9A%84%E7%BB%93%E6%9E%84">通道的结构</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E9%80%9A%E9%81%93%E7%A8%8B%E5%BA%8F">通道程序</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E9%80%9A%E9%81%93%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B">通道工作过程</a></li>
+</ul>
+</li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#dma%E6%96%B9%E5%BC%8F%E5%92%8C%E9%80%9A%E9%81%93%E6%96%B9%E5%BC%8F%E5%8C%BA%E5%88%AB">DMA方式和通道方式区别</a>
+<ul>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#dma%E6%96%B9%E5%BC%8F%E5%AE%8C%E5%85%A8%E7%A1%AC%E4%BB%B6">DMA方式（完全硬件）</a></li>
+<li><a href="IO%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F.html#%E9%80%9A%E9%81%93%E6%96%B9%E5%BC%8F%E6%9C%89%E7%A8%8B%E5%BA%8F%E5%8F%82%E4%B8%8E">通道方式（有程序参与）</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="程序查询方式"><a class="header" href="#程序查询方式">程序查询方式</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605163632.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605164849.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605164928.png" alt="" /></p>
+<h2 id="程序中断方式"><a class="header" href="#程序中断方式">程序中断方式</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605165008.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605174117.png" alt="" /></p>
+<h3 id="中断请求的分类"><a class="header" href="#中断请求的分类">中断请求的分类</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605174229.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605174339.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605174421.png" alt="" /></p>
+<h3 id="中断判优-优先级设置"><a class="header" href="#中断判优-优先级设置">中断判优-优先级设置</a></h3>
+<ol>
+<li>硬件故障中断属于最高级，其次是软件中断；</li>
+<li>非屏蔽中断优于可屏蔽中断；</li>
+<li>DMA请求优于I/O设备传送的中断请求</li>
+<li>高速设备优于低速设备；</li>
+<li>输入没备优于输出设备；</li>
+<li>实时设备优于普通设备。</li>
+</ol>
+<h3 id="中断处理过程"><a class="header" href="#中断处理过程">中断处理过程</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605221207.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605221130.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605221429.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607155932.png" alt="" /></p>
+<h3 id="多重中断"><a class="header" href="#多重中断">多重中断</a></h3>
+<p>单重中断： 执行中断服务程序时不响应新的中断请求。</p>
+<p>多重中断 又称中断嵌套，执行中断服务程序时可响应新的中断请求。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607162711.png" alt="" /></p>
+<h3 id="中断屏蔽技术"><a class="header" href="#中断屏蔽技术">中断屏蔽技术</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607162742.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607162830.png" alt="" /></p>
+<h3 id="中断系统小结"><a class="header" href="#中断系统小结">中断系统小结</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607162853.png" alt="" /></p>
+<h3 id="程序中断方式传输数据"><a class="header" href="#程序中断方式传输数据">程序中断方式传输数据</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607165404.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607165335.png" alt="" /></p>
+<h2 id="dma-方式"><a class="header" href="#dma-方式">DMA 方式</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607170650.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607171224.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607171509.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607171944.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607172131.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607172355.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607172548.png" alt="" /></p>
+<h2 id="通道方式"><a class="header" href="#通道方式">通道方式</a></h2>
+<p><a href="https://www.cnblogs.com/RunningSnails/p/17693782.html">组成原理(二十一)：输入输出系统之 通道控制方式 来源</a></p>
+<h3 id="通道的功能"><a class="header" href="#通道的功能">通道的功能</a></h3>
+<p>接收CPU和I/O指令，按指令要求与指定外设进行联系；</p>
+<p>从主存取出属于该通道程序的通道指令，经译码后向设备控制器和设备发送各种命令。</p>
+<p>实施主存和外设间的数据传送，提供数据中间缓存的空间以及指示数据放的主存地址和传送的数据量。</p>
+<p>从外设获得设备的状态信息，形成并保存通道本身的状态信息。</p>
+<p>将外设的中断请求和通道本身的中断请求按次序报告给CPU。</p>
+<h3 id="通道的类型和结构"><a class="header" href="#通道的类型和结构">通道的类型和结构</a></h3>
+<p>按输入输出信息的传送方式，通道可分为字节多路通道、选择通道和数组多路通道。</p>
+<p><img src="https://img2023.cnblogs.com/blog/1680081/202309/1680081-20230911160005064-603832025.png" alt="0" /></p>
+<p>字节多路通道，用于连接与管理多台低速设备，以字节交叉方式传送信息。</p>
+<p><img src="https://img2023.cnblogs.com/blog/1680081/202309/1680081-20230911160005078-1102865493.png" alt="0" /></p>
+<p>选择通道又称高速通道，在物理上可连接多个设备，这些设备分时工作，选择通道一次只能选择一台设备进行数据传送，只有当它和主存交换完信息后，才能选择另一台外部设备并执行该设备的通道程序。</p>
+<p>数组多路通道是字节多路通道 和 选择通道的结合。当某设备进行数据传送时，通道只为该设备服务；当设备在执行辅助操作时，通道暂时断开与这个设备的连接，挂起该设备的通道程序，去为其他设备服务。</p>
+<p>数据传输率/流量：通道在单位时间内传送的位数或字节数，代表了计算机的吞吐量。</p>
+<h3 id="通道的结构"><a class="header" href="#通道的结构">通道的结构</a></h3>
+<p>通道的逻辑结构中包含3个重要的寄存器CSWR、CAWR、CCWR。</p>
+<p><img src="https://img2023.cnblogs.com/blog/1680081/202309/1680081-20230911160005103-245088500.png" alt="0" /></p>
+<p>CCWR是通道命令寄存器，用来存放通道命令字(CCW)。</p>
+<p>CAWR是通道地址字寄存器，指出通道程序在主存中的起始地址，工作时，通道根据提供的地址到主存中取出CCW并加以执行。</p>
+<p>CSWR是通道状态字寄存器，记录了通道程序执行后本通道和相应设备的各种状态信息，这些信息称为通道状态字(CSW)。</p>
+<h3 id="通道程序"><a class="header" href="#通道程序">通道程序</a></h3>
+<p>通道指令也是通道命令字(CCW)，用来编制通道程序，并由管理程序将它存放在主存中。用通道地址字(CAW)指出通道程序的起始地址。</p>
+<p>在主CPU执行启动I/O指令，启动指定通道后，通道将执行通道程序来实现的I/O操作，直到组成通道程序的全部CCW执行完毕。</p>
+<p>通道程序由一条或几条CCW组成。</p>
+<h3 id="通道工作过程"><a class="header" href="#通道工作过程">通道工作过程</a></h3>
+<p>通道完成一次数据传输的主要过程如下：</p>
+<p><img src="https://img2023.cnblogs.com/blog/1680081/202309/1680081-20230911160005151-1422167643.png" alt="0" /></p>
+<p>1、用户程序中使用访问管指令进入管理程序，由CPU通过管理程序组织一个通道程序，并启动通道；</p>
+<p>2、通道执行CPU为它组织的通道程序，完成指定的数据输入输出工作；</p>
+<p>3、通道程序结束后向CPU发出中断请求。CPU响应该中断请求后，第二次调用管理程序对中断请求进行处理。</p>
+<p>每完成一次输入输出工作，CPU只需要两次调用管理程序，大大减少了对用户程序的打扰。</p>
+<h2 id="dma方式和通道方式区别"><a class="header" href="#dma方式和通道方式区别">DMA方式和通道方式区别</a></h2>
+<p>通道是实现外设和主存之间直接交换数据的控制器。两者的区别在于：</p>
+<p>DMA控制器是通过设计的硬件控制逻辑实现对数据传送的控制；通道是一个具有特殊功能的处理器，具有更强的独立处理数据的输入和输出功能。</p>
+<p>DMA控制器通常只能控制一台或少数几台同类设备；一个通道可以同时控制众多同类或不同类设备。</p>
+<h3 id="dma方式完全硬件"><a class="header" href="#dma方式完全硬件">DMA方式（完全硬件）</a></h3>
+<p>在 I/O设备与外设之间有直接数据通路，传送过程中不需要CPU参与，而是 DMA控制器控制完成。</p>
+<p>DMA工作过程：</p>
+<p>1）预处理</p>
+<p>CPU收到 设备发出的DMA请求，它做为 司令，会向 DMA发布一些命令，启动DMA，测试I/O设备，初始化寄存器等</p>
+<p>2）数据传送</p>
+<p>完全由DMA硬件完成</p>
+<p>3）后处理</p>
+<p>完成数据传送后，DMA控制器向CPU发送中断请求。</p>
+<h3 id="通道方式有程序参与"><a class="header" href="#通道方式有程序参与">通道方式（有程序参与）</a></h3>
+<p>I/O 通道是指专门负责输入/输出的处理机，每个通道都挂接外设，主机在执行 I/O命令时，只需要启动通道，然后通道会执行通道程序。</p>
+<p>通道方式是对DMA方式的发展，由一个数据块的读写发展成为对一组数据块的处理。</p>
+<p>通道的工作过程：CPU只要向 I/O通道发送一条 I/O指令，哪怕是一组相关的读写操作，通道会执行通道程序，完成一组数据的传送。</p>
+<p>DMA与通道方式的区别：</p>
+<p>1）一些控制信息，如数据块的大小，内存位置，DMA方式下由CPU来控制，但是通道方式下由通道控制</p>
+<p>2）每个DMA控制器对应一台设备与内存交换数据，但是通道可以控制多台设备与内存的数据进行交换。</p>
 
                     </main>
 

@@ -175,6 +175,67 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="指令流水线"><a class="header" href="#指令流水线">指令流水线</a></h1>
+<ul>
+<li><a href="#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">指令流水线的基本概念</a></li>
+<li><a href="#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0%E5%8F%8A%E5%88%86%E7%B1%BB">指令流水线的影响因素及分类</a>
+<ul>
+<li><a href="#%E5%BD%B1%E5%93%8D%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%9B%A0%E7%B4%A0">影响流水线的因素</a></li>
+<li><a href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%88%86%E7%B1%BB">流水线的分类</a></li>
+<li><a href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%A4%9A%E5%8F%91%E6%8A%80%E6%9C%AF">流水线的多发技术</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%94%E6%AE%B5%E5%BC%8F%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF">五段式指令流水线</a></li>
+</ul>
+<h2 id="指令流水线的基本概念"><a class="header" href="#指令流水线的基本概念">指令流水线的基本概念</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162125.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162208.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162238.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162409.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162432.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162503.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602162026.png" alt="" /></p>
+<h2 id="指令流水线的影响因素及分类"><a class="header" href="#指令流水线的影响因素及分类">指令流水线的影响因素及分类</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602163637.png" alt="" /></p>
+<h3 id="影响流水线的因素"><a class="header" href="#影响流水线的因素">影响流水线的因素</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602164250.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602164331.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602164708.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602165248.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602165324.png" alt="" /></p>
+<h3 id="流水线的分类"><a class="header" href="#流水线的分类">流水线的分类</a></h3>
+<p>1.部件功能级、处理机级和处理机间级流水线</p>
+<p>根据流水线使用的级别的不同，流水线可分为部件功能级流水线、处理机级流水线和处理机间流水线。</p>
+<p>部件功能级流水就是将复杂的算术逻辑运算组成流水线工作方式。例如，可将浮点加法操作分成求阶差、对阶、尾数相加以及结果规格化等4个子过程。</p>
+<p>处理机级流水是把一条指令解释过程分成多个子过程，如前面提到的取指、译码、执行、访存及写回5个子过程。</p>
+<p>处理机间流水是一种宏流水，其中每一个处理机完成某一专门任务，各个处理机所得到的结果需存放在与下一个处理机所共享的存储器中。</p>
+<p>2.单功能流水线和多功能流水线</p>
+<p>按流水线可以完成的功能，流水线可分为单功能流水线和多功能流水线。</p>
+<p>单功能流水线指只能实现一种固定的专门功能的流水线；</p>
+<p>多功能流水线指通过各段间的不同连接方式可以同时或不同时地实现多种功能的流水线。</p>
+<p>3.动态流水线和静态流水线</p>
+<p>按同一时间内各段之间的连接方式，流水线可分为静态流水线和动态流水线。</p>
+<p>静态流水线指在同一时间内，流水线的各段只能按同一种功能的连接方式工作。</p>
+<p>动态流水线指在同一时间内，当某些段正在实现某种运算时，另一些段却正在进行另一种运算。这样对提高流水线的效率很有好处，但会使流水线控制变得很复杂。</p>
+<p>4.线性流水线和非线性流水线</p>
+<p>按流水线的各个功能段之间是否有反馈信号，流水线可分为线性流水线与非线性流水线。</p>
+<p>线性流水线牛，从输入到输出，每个功能段只允许经过一次，不存在反馈回路。</p>
+<p>非线性流水线存在反馈回路，从输入到输出过程中，某些功能段将数次通过流水线，这种流水线
+适合进行线性递归的运算。</p>
+<h3 id="流水线的多发技术"><a class="header" href="#流水线的多发技术">流水线的多发技术</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602170339.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602170538.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602170642.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602170730.png" alt="" /></p>
+<h2 id="五段式指令流水线"><a class="header" href="#五段式指令流水线">五段式指令流水线</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602181724.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602181939.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602182126.png" alt="" />
+<img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602182213.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602182431.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602182726.png" alt="" /></p>
+<p>注意：WB写回寄存器是指写回通用寄存器</p>
+<p>转移指令中需要修改PC的值，上面这张图中<code>(PC) + 指令字长</code>才是下一条指令的地址</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602181658.png" alt="" /></p>
 
                     </main>
 

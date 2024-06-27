@@ -174,7 +174,135 @@
                 <div id="content" class="content">
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="io控制方式"><a class="header" href="#io控制方式">IO控制方式</a></h1>
+<h1 id="io控制方式"><a class="header" href="#io控制方式">I/O控制方式</a></h1>
+<ul>
+<li><a href="#%E7%A8%8B%E5%BA%8F%E6%9F%A5%E8%AF%A2%E6%96%B9%E5%BC%8F">程序查询方式</a></li>
+<li><a href="#%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%AD%E6%96%B9%E5%BC%8F">程序中断方式</a>
+<ul>
+<li><a href="#%E4%B8%AD%E6%96%AD%E8%AF%B7%E6%B1%82%E7%9A%84%E5%88%86%E7%B1%BB">中断请求的分类</a></li>
+<li><a href="#%E4%B8%AD%E6%96%AD%E5%88%A4%E4%BC%98-%E4%BC%98%E5%85%88%E7%BA%A7%E8%AE%BE%E7%BD%AE">中断判优-优先级设置</a></li>
+<li><a href="#%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B">中断处理过程</a></li>
+<li><a href="#%E5%A4%9A%E9%87%8D%E4%B8%AD%E6%96%AD">多重中断</a></li>
+<li><a href="#%E4%B8%AD%E6%96%AD%E5%B1%8F%E8%94%BD%E6%8A%80%E6%9C%AF">中断屏蔽技术</a></li>
+<li><a href="#%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F%E5%B0%8F%E7%BB%93">中断系统小结</a></li>
+<li><a href="#%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%AD%E6%96%B9%E5%BC%8F%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE">程序中断方式传输数据</a></li>
+</ul>
+</li>
+<li><a href="#dma-%E6%96%B9%E5%BC%8F">DMA 方式</a></li>
+<li><a href="#%E9%80%9A%E9%81%93%E6%96%B9%E5%BC%8F">通道方式</a>
+<ul>
+<li><a href="#%E9%80%9A%E9%81%93%E7%9A%84%E5%8A%9F%E8%83%BD">通道的功能</a></li>
+<li><a href="#%E9%80%9A%E9%81%93%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BB%93%E6%9E%84">通道的类型和结构</a></li>
+<li><a href="#%E9%80%9A%E9%81%93%E7%9A%84%E7%BB%93%E6%9E%84">通道的结构</a></li>
+<li><a href="#%E9%80%9A%E9%81%93%E7%A8%8B%E5%BA%8F">通道程序</a></li>
+<li><a href="#%E9%80%9A%E9%81%93%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B">通道工作过程</a></li>
+</ul>
+</li>
+<li><a href="#dma%E6%96%B9%E5%BC%8F%E5%92%8C%E9%80%9A%E9%81%93%E6%96%B9%E5%BC%8F%E5%8C%BA%E5%88%AB">DMA方式和通道方式区别</a>
+<ul>
+<li><a href="#dma%E6%96%B9%E5%BC%8F%E5%AE%8C%E5%85%A8%E7%A1%AC%E4%BB%B6">DMA方式（完全硬件）</a></li>
+<li><a href="#%E9%80%9A%E9%81%93%E6%96%B9%E5%BC%8F%E6%9C%89%E7%A8%8B%E5%BA%8F%E5%8F%82%E4%B8%8E">通道方式（有程序参与）</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="程序查询方式"><a class="header" href="#程序查询方式">程序查询方式</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605163632.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605164849.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605164928.png" alt="" /></p>
+<h2 id="程序中断方式"><a class="header" href="#程序中断方式">程序中断方式</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605165008.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605174117.png" alt="" /></p>
+<h3 id="中断请求的分类"><a class="header" href="#中断请求的分类">中断请求的分类</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605174229.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605174339.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605174421.png" alt="" /></p>
+<h3 id="中断判优-优先级设置"><a class="header" href="#中断判优-优先级设置">中断判优-优先级设置</a></h3>
+<ol>
+<li>硬件故障中断属于最高级，其次是软件中断；</li>
+<li>非屏蔽中断优于可屏蔽中断；</li>
+<li>DMA请求优于I/O设备传送的中断请求</li>
+<li>高速设备优于低速设备；</li>
+<li>输入没备优于输出设备；</li>
+<li>实时设备优于普通设备。</li>
+</ol>
+<h3 id="中断处理过程"><a class="header" href="#中断处理过程">中断处理过程</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605221207.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605221130.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240605221429.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607155932.png" alt="" /></p>
+<h3 id="多重中断"><a class="header" href="#多重中断">多重中断</a></h3>
+<p>单重中断： 执行中断服务程序时不响应新的中断请求。</p>
+<p>多重中断 又称中断嵌套，执行中断服务程序时可响应新的中断请求。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607162711.png" alt="" /></p>
+<h3 id="中断屏蔽技术"><a class="header" href="#中断屏蔽技术">中断屏蔽技术</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607162742.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607162830.png" alt="" /></p>
+<h3 id="中断系统小结"><a class="header" href="#中断系统小结">中断系统小结</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607162853.png" alt="" /></p>
+<h3 id="程序中断方式传输数据"><a class="header" href="#程序中断方式传输数据">程序中断方式传输数据</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607165404.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607165335.png" alt="" /></p>
+<h2 id="dma-方式"><a class="header" href="#dma-方式">DMA 方式</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607170650.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607171224.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607171509.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607171944.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607172131.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607172355.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240607172548.png" alt="" /></p>
+<h2 id="通道方式"><a class="header" href="#通道方式">通道方式</a></h2>
+<p><a href="https://www.cnblogs.com/RunningSnails/p/17693782.html">组成原理(二十一)：输入输出系统之 通道控制方式 来源</a></p>
+<h3 id="通道的功能"><a class="header" href="#通道的功能">通道的功能</a></h3>
+<p>接收CPU和I/O指令，按指令要求与指定外设进行联系；</p>
+<p>从主存取出属于该通道程序的通道指令，经译码后向设备控制器和设备发送各种命令。</p>
+<p>实施主存和外设间的数据传送，提供数据中间缓存的空间以及指示数据放的主存地址和传送的数据量。</p>
+<p>从外设获得设备的状态信息，形成并保存通道本身的状态信息。</p>
+<p>将外设的中断请求和通道本身的中断请求按次序报告给CPU。</p>
+<h3 id="通道的类型和结构"><a class="header" href="#通道的类型和结构">通道的类型和结构</a></h3>
+<p>按输入输出信息的传送方式，通道可分为字节多路通道、选择通道和数组多路通道。</p>
+<p><img src="https://img2023.cnblogs.com/blog/1680081/202309/1680081-20230911160005064-603832025.png" alt="0" /></p>
+<p>字节多路通道，用于连接与管理多台低速设备，以字节交叉方式传送信息。</p>
+<p><img src="https://img2023.cnblogs.com/blog/1680081/202309/1680081-20230911160005078-1102865493.png" alt="0" /></p>
+<p>选择通道又称高速通道，在物理上可连接多个设备，这些设备分时工作，选择通道一次只能选择一台设备进行数据传送，只有当它和主存交换完信息后，才能选择另一台外部设备并执行该设备的通道程序。</p>
+<p>数组多路通道是字节多路通道 和 选择通道的结合。当某设备进行数据传送时，通道只为该设备服务；当设备在执行辅助操作时，通道暂时断开与这个设备的连接，挂起该设备的通道程序，去为其他设备服务。</p>
+<p>数据传输率/流量：通道在单位时间内传送的位数或字节数，代表了计算机的吞吐量。</p>
+<h3 id="通道的结构"><a class="header" href="#通道的结构">通道的结构</a></h3>
+<p>通道的逻辑结构中包含3个重要的寄存器CSWR、CAWR、CCWR。</p>
+<p><img src="https://img2023.cnblogs.com/blog/1680081/202309/1680081-20230911160005103-245088500.png" alt="0" /></p>
+<p>CCWR是通道命令寄存器，用来存放通道命令字(CCW)。</p>
+<p>CAWR是通道地址字寄存器，指出通道程序在主存中的起始地址，工作时，通道根据提供的地址到主存中取出CCW并加以执行。</p>
+<p>CSWR是通道状态字寄存器，记录了通道程序执行后本通道和相应设备的各种状态信息，这些信息称为通道状态字(CSW)。</p>
+<h3 id="通道程序"><a class="header" href="#通道程序">通道程序</a></h3>
+<p>通道指令也是通道命令字(CCW)，用来编制通道程序，并由管理程序将它存放在主存中。用通道地址字(CAW)指出通道程序的起始地址。</p>
+<p>在主CPU执行启动I/O指令，启动指定通道后，通道将执行通道程序来实现的I/O操作，直到组成通道程序的全部CCW执行完毕。</p>
+<p>通道程序由一条或几条CCW组成。</p>
+<h3 id="通道工作过程"><a class="header" href="#通道工作过程">通道工作过程</a></h3>
+<p>通道完成一次数据传输的主要过程如下：</p>
+<p><img src="https://img2023.cnblogs.com/blog/1680081/202309/1680081-20230911160005151-1422167643.png" alt="0" /></p>
+<p>1、用户程序中使用访问管指令进入管理程序，由CPU通过管理程序组织一个通道程序，并启动通道；</p>
+<p>2、通道执行CPU为它组织的通道程序，完成指定的数据输入输出工作；</p>
+<p>3、通道程序结束后向CPU发出中断请求。CPU响应该中断请求后，第二次调用管理程序对中断请求进行处理。</p>
+<p>每完成一次输入输出工作，CPU只需要两次调用管理程序，大大减少了对用户程序的打扰。</p>
+<h2 id="dma方式和通道方式区别"><a class="header" href="#dma方式和通道方式区别">DMA方式和通道方式区别</a></h2>
+<p>通道是实现外设和主存之间直接交换数据的控制器。两者的区别在于：</p>
+<p>DMA控制器是通过设计的硬件控制逻辑实现对数据传送的控制；通道是一个具有特殊功能的处理器，具有更强的独立处理数据的输入和输出功能。</p>
+<p>DMA控制器通常只能控制一台或少数几台同类设备；一个通道可以同时控制众多同类或不同类设备。</p>
+<h3 id="dma方式完全硬件"><a class="header" href="#dma方式完全硬件">DMA方式（完全硬件）</a></h3>
+<p>在 I/O设备与外设之间有直接数据通路，传送过程中不需要CPU参与，而是 DMA控制器控制完成。</p>
+<p>DMA工作过程：</p>
+<p>1）预处理</p>
+<p>CPU收到 设备发出的DMA请求，它做为 司令，会向 DMA发布一些命令，启动DMA，测试I/O设备，初始化寄存器等</p>
+<p>2）数据传送</p>
+<p>完全由DMA硬件完成</p>
+<p>3）后处理</p>
+<p>完成数据传送后，DMA控制器向CPU发送中断请求。</p>
+<h3 id="通道方式有程序参与"><a class="header" href="#通道方式有程序参与">通道方式（有程序参与）</a></h3>
+<p>I/O 通道是指专门负责输入/输出的处理机，每个通道都挂接外设，主机在执行 I/O命令时，只需要启动通道，然后通道会执行通道程序。</p>
+<p>通道方式是对DMA方式的发展，由一个数据块的读写发展成为对一组数据块的处理。</p>
+<p>通道的工作过程：CPU只要向 I/O通道发送一条 I/O指令，哪怕是一组相关的读写操作，通道会执行通道程序，完成一组数据的传送。</p>
+<p>DMA与通道方式的区别：</p>
+<p>1）一些控制信息，如数据块的大小，内存位置，DMA方式下由CPU来控制，但是通道方式下由通道控制</p>
+<p>2）每个DMA控制器对应一台设备与内存交换数据，但是通道可以控制多台设备与内存的数据进行交换。</p>
 
                     </main>
 

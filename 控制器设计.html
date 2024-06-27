@@ -175,6 +175,58 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="控制器设计"><a class="header" href="#控制器设计">控制器设计</a></h1>
+<ul>
+<li><a href="#%E7%A1%AC%E5%B8%83%E7%BA%BF%E6%8E%A7%E5%88%B6%E5%99%A8%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E6%8E%A7%E5%88%B6%E5%99%A8">硬布线控制器（组合逻辑控制器）</a></li>
+<li><a href="#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E5%99%A8%E5%AD%98%E5%82%A8%E9%80%BB%E8%BE%91%E6%8E%A7%E5%88%B6%E5%99%A8">微程序控制器（存储逻辑控制器）</a>
+<ul>
+<li><a href="#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86">微程序控制器的基本原理</a></li>
+<li><a href="#%E5%BE%AE%E6%8C%87%E4%BB%A4%E7%9A%84%E8%AE%BE%E8%AE%A1">微指令的设计</a></li>
+<li><a href="#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E5%8D%95%E5%85%83%E7%9A%84%E8%AE%BE%E8%AE%A1">微程序控制单元的设计</a></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601143328.png" alt="" /></p>
+<h2 id="硬布线控制器组合逻辑控制器"><a class="header" href="#硬布线控制器组合逻辑控制器">硬布线控制器（组合逻辑控制器）</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601144637.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601144720.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601144948.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601150210.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601150659.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601151019.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601151328.png" alt="" /></p>
+<p>硬布线控制器：微操作控制信号由组合逻辑电路根据当前的指令码、状态和时序，即时产生</p>
+<p>时序信息包含机器周期、节拍</p>
+<h2 id="微程序控制器存储逻辑控制器"><a class="header" href="#微程序控制器存储逻辑控制器">微程序控制器（存储逻辑控制器）</a></h2>
+<h3 id="微程序控制器的基本原理"><a class="header" href="#微程序控制器的基本原理">微程序控制器的基本原理</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601153333.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601153804.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601154419.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601154623.png" alt="" /></p>
+<h3 id="微指令的设计"><a class="header" href="#微指令的设计">微指令的设计</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601155824.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601155757.png" alt="" /></p>
+<p>微指令的编码方式又称为微指令的控制方式，它是指如何对微指令的控制字段进行编码，以形成控制信号。编码的目标是在保证速度的情况下，尽量缩短微指令字长。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601160731.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601161006.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601161300.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601162010.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601162805.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601162831.png" alt="" /></p>
+<h3 id="微程序控制单元的设计"><a class="header" href="#微程序控制单元的设计">微程序控制单元的设计</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601163315.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601163557.png" alt="" /></p>
+<p>微程序设计分类</p>
+<p>1.静态微程序设计和动态微程序设计</p>
+<p>静态 微程序无需改变，采用ROM</p>
+<p>动态 通过改变微指令和微程序改变机器指令</p>
+<p>有利于仿真，采用EPROM</p>
+<p>2.毫微程序设计</p>
+<p>毫微程序设计的基本概念</p>
+<p>微程序设计 用微程序解释机器指令</p>
+<p>毫微程序设计用毫微程序解释微程序</p>
+<p>毫微指令与微指令的关系好比微指令与机器指令的关系</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601164205.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240601164245.png" alt="" /></p>
 
                     </main>
 

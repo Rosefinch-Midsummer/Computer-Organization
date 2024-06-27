@@ -175,6 +175,39 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="多处理器系统"><a class="header" href="#多处理器系统">多处理器系统</a></h1>
+<ul>
+<li><a href="#sisdsimdmimd%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">SISD、SIMD、MIMD的基本概念</a></li>
+<li><a href="#%E5%90%91%E9%87%8F%E5%A4%84%E7%90%86%E5%99%A8">向量处理器</a></li>
+<li><a href="#%E5%A4%9A%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8%E5%92%8C%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8">多核处理器和共享内存多处理器</a></li>
+<li><a href="#%E7%A1%AC%E4%BB%B6%E5%A4%9A%E7%BA%BF%E7%A8%8B">硬件多线程</a></li>
+</ul>
+<h2 id="sisdsimdmimd的基本概念"><a class="header" href="#sisdsimdmimd的基本概念">SISD、SIMD、MIMD的基本概念</a></h2>
+<p>基于指令流的数量和数据流的数量，对计算机体系结构分为SISD、SIMD、MISD和MIMD四类。常规的单处理器属于SISD，而常规的多处理器属于MIMD。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185218.png" alt="" /></p>
+<p>1.单指合流单数据流（SISD）结构</p>
+<p>SISD是传统的串行计算机结构，这种计算机通常仅包含一个处理器和一个存储器，处理器在一段时间内仅执行一条指令，按指令流规定的顺序串行执行指令流中的若干条指令。为了提高速度，有些SISD计算机采用流水线的方式，因此，SISD处理器有时会设置多个功能部件，并采用多模块交叉方式组织存储器。本书前面介绍的内容多属于SISD结构。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602184230.png" alt="" /></p>
+<p>2.单指合流多数据流（SIMD）结构</p>
+<p>SIMD是指一个指令流同时对多个数据流进行处理，一般称为数据级并行技术。这种结构的计算机通常由一个指令控制部件、多个处理单元组成。每个处理单元虽然都执行的是同一条指令，但每个单元都有自己的地址寄存器，这样每个单元都有不同的数据地址，因此，不同处理单元执行的同一条指令所处理的数据是不同的。一个顺序应用程序编译后，可能按SISD组织并运行于串行硬件上，也可能按SIMD组织并运行于并行硬件上。</p>
+<p>SIMD在使用for循环处理数组时最有效，比如，一条分别对16对数据进行运算的SIMD指令如果在16个ALU中同时运算，则仅需一次运算时间就能完成运算。SIMD在使用case或switch语句时效率最低，此时每个执行单元必须根据不同的数据执行不同的操作。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602184526.png" alt="" /></p>
+<p>3.多指合流单数据流（MISD）结构</p>
+<p>MISD是指同时执行多条指令，处理同一个数据，实际上不存在这样的计算机。</p>
+<p>4.多指合流多数据流（MIMD）结构</p>
+<p>MIMD是指同时执行多条指令，处理多个数据。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602184736.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185305.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185002.png" alt="" /></p>
+<h2 id="向量处理器"><a class="header" href="#向量处理器">向量处理器</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185457.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185550.png" alt="" /></p>
+<h2 id="多核处理器和共享内存多处理器"><a class="header" href="#多核处理器和共享内存多处理器">多核处理器和共享内存多处理器</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185722.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602185805.png" alt="" /></p>
+<h2 id="硬件多线程"><a class="header" href="#硬件多线程">硬件多线程</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602190459.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602190936.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240602191047.png" alt="" /></p>
 
                     </main>
 

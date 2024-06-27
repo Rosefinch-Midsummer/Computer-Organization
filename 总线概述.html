@@ -175,6 +175,61 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="总线概述"><a class="header" href="#总线概述">总线概述</a></h1>
+<ul>
+<li><a href="#%E6%9C%AC%E8%8A%82%E5%9B%9E%E9%A1%BE">本节回顾</a></li>
+<li><a href="#%E6%80%BB%E7%BA%BF%E7%9A%84%E7%89%B9%E7%82%B9">总线的特点</a></li>
+<li><a href="#%E6%80%BB%E7%BA%BF%E7%9A%84%E7%89%B9%E6%80%A7">总线的特性</a></li>
+<li><a href="#%E6%80%BB%E7%BA%BF%E7%9A%84%E5%88%86%E7%B1%BB">总线的分类</a>
+<ul>
+<li><a href="#%E4%B8%B2%E8%A1%8C%E6%80%BB%E7%BA%BF%E4%B8%8E%E5%B9%B6%E8%A1%8C%E6%80%BB%E7%BA%BF">串行总线与并行总线</a></li>
+<li><a href="#%E7%89%87%E5%86%85%E6%80%BB%E7%BA%BF%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF%E5%92%8C%E9%80%9A%E4%BF%A1%E6%80%BB%E7%BA%BF">片内总线、系统总线和通信总线</a></li>
+</ul>
+</li>
+<li><a href="#%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF%E7%9A%84%E7%BB%93%E6%9E%84">系统总线的结构</a></li>
+<li><a href="#%E6%80%BB%E7%BA%BF%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87">总线的性能指标</a></li>
+</ul>
+<h2 id="本节回顾"><a class="header" href="#本节回顾">本节回顾</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603154755.png" alt="" /></p>
+<h2 id="总线的特点"><a class="header" href="#总线的特点">总线的特点</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603152307.png" alt="" /></p>
+<h2 id="总线的特性"><a class="header" href="#总线的特性">总线的特性</a></h2>
+<p>1.机械特性：尺寸、形状、管脚数、排列顺序</p>
+<p>2.电气特性：传输方向和有效的电平范围</p>
+<p>3.功能特性：每根传输线的功能(地址、数据、控制)</p>
+<p>4.时间特性：信号的时序关系</p>
+<h2 id="总线的分类"><a class="header" href="#总线的分类">总线的分类</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603154958.png" alt="" /></p>
+<h3 id="串行总线与并行总线"><a class="header" href="#串行总线与并行总线">串行总线与并行总线</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603155020.png" alt="" /></p>
+<h3 id="片内总线系统总线和通信总线"><a class="header" href="#片内总线系统总线和通信总线">片内总线、系统总线和通信总线</a></h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603155104.png" alt="" /></p>
+<p>总线的分类（按总线功能）</p>
+<p>1.片内总线</p>
+<p>片内总线是芯片内部的总线。</p>
+<p>它是CPU芯片内部寄存器与寄存器之间、寄存器与ALU之间的公共连接线。</p>
+<p>2.系统总线</p>
+<p>系统总线是计算机系统内各功能部件（CPU、主存、V/O接口）之间相互连接的总线。</p>
+<p>按系统总线传输信息内容的不同，又可分为3类：数据总线、地址总线和控制总线。</p>
+<p>1）数据总线用来传输各功能部件之间的数据信息，它是双向传输总线，其位数与机器字长、存储字长有关。</p>
+<p>2）地址总线用来指出数据总线上的源数据或目的数据所在的主存单元或/O端口的地址，它是单向传输总线，地址总线的位数与主存地址空间的大小有关。</p>
+<p>3）控制总线传输的是控制信息，包括CPU送出的控制命令和主存（或外设）返回CPU的反馈信号。</p>
+<p>3.通信总线</p>
+<p>通信总线是用于计算机系统之间或计算机系统与其他系统（如远程通信设备、测试设备）之间信息传送的总线，通信总线也称为外部总线。</p>
+<p>数据通路表示的是逻辑上数据流经的路径</p>
+<p>数据总线是承载的媒介</p>
+<p>地址总线也是承载的媒介</p>
+<h2 id="系统总线的结构"><a class="header" href="#系统总线的结构">系统总线的结构</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603155427.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603155754.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603155827.png" alt="" /></p>
+<p>系统工作效率较低原因：同一时刻，只能由一条总线在工作</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603155928.png" alt="" /></p>
+<h2 id="总线的性能指标"><a class="header" href="#总线的性能指标">总线的性能指标</a></h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603161136.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603162252.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603162210.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603162620.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/20240603162807.png" alt="" /></p>
 
                     </main>
 
